@@ -38,13 +38,27 @@
   text-align: justify
  h2
   text-align: center
- div
+ div:nth-child(4)
   display: grid
   grid-template-columns: auto 1fr
   grid-template-rows: 1fr
   img
    width: 20px
    height: 20px
+ div:nth-child(5)
+  display: grid
+  grid-template-columns: repeat(2,auto )
+  grid-template-rows: repeat(2, auto )
+  grid-template-areas: "paragraph paragraph" 'img title' 'img subtitle'
+  p
+   grid-area: paragraph
+  img
+   grid-area: img
+  h3
+   grid-area: title
+  span
+   grid-area: subtitle
+  
 
 
 

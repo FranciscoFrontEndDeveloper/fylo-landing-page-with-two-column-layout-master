@@ -52,14 +52,32 @@
 .Main__container--section2 h2 {
   text-align: center;
 }
-.Main__container--section2 div {
+.Main__container--section2 div:nth-child(4) {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
 }
-.Main__container--section2 div img {
+.Main__container--section2 div:nth-child(4) img {
   width: 20px;
   height: 20px;
+}
+.Main__container--section2 div:nth-child(5) {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "paragraph paragraph" "img title" "img subtitle";
+}
+.Main__container--section2 div:nth-child(5) p {
+  grid-area: paragraph;
+}
+.Main__container--section2 div:nth-child(5) img {
+  grid-area: img;
+}
+.Main__container--section2 div:nth-child(5) h3 {
+  grid-area: title;
+}
+.Main__container--section2 div:nth-child(5) span {
+  grid-area: subtitle;
 }
 
 .containerFooter {
