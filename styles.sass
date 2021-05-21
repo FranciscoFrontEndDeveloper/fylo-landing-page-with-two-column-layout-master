@@ -4,16 +4,21 @@
  display: grid
  grid-template-columns: 1fr
  grid-template-rows: 1fr auto
+.Main__container
+ padding: 30px 20px
 .Main__container--nav
  display: grid
  grid-template-columns: 1fr repeat(3,auto )
+ column-gap: 10px
  img
+  width: 80px
  a
   text-decoration: none
 .Main__container--section1
  display: grid
  grid-template-columns: 1fr
  grid-template-rows: repeat(4,auto )
+ row-gap: 30px
  img
   width: 100%
   height: 100%
@@ -24,13 +29,15 @@
   grid-template-columns: 1fr
   grid-template-rows: repeat(2,auto )
   justify-items: center
+  row-gap: 20px
   input
-   width: 80%
+   width: 100%
 .Main__container--section2
  display: grid
  grid-template-columns: 1fr
  grid-template-rows: repeat(4,auto )
  justify-items: center
+ row-gap: 30px
  img
   width: 100%
   height: 100%
@@ -50,6 +57,7 @@
   grid-template-columns: repeat(2,auto )
   grid-template-rows: repeat(2, auto )
   grid-template-areas: "paragraph paragraph" 'img title' 'img subtitle'
+  row-gap: 20px
   p
    grid-area: paragraph
   img
@@ -58,9 +66,45 @@
    grid-area: title
   span
    grid-area: subtitle
-  
-
-
+.Main__container--section3
+ display: grid
+ grid-template-columns: 1fr
+ grid-template-rows: repeat(3, auto )
+ justify-items: center
+ grid-template-areas: 'title' 'paragraph' 'form'
+ row-gap: 20px
+ h4
+  grid-area: title
+ p
+  grid-area: paragraph
+ form
+  display: grid
+  justify-items: center
+  width: 100%
+  grid-area: form
+  grid-template-rows: repeat(2,auto )
+  row-gap: 10px
+  input
+   width: 70%  
+.Main__container--section4
+ display: grid
+ grid-template-columns: 1fr
+ grid-template-rows: repeat(5,auto)
+ row-gap: 50px
+ div:nth-child(2)
+  display: grid
+  grid-template-columns: repeat(2,auto)
+  grid-template-rows: repeat(2,auto)
+ div:nth-child(3)
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: repeat(4,auto )
+  row-gap: 20px
+ div:nth-child(4)
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: repeat(3,auto )
+  row-gap: 20px
 
 
 
