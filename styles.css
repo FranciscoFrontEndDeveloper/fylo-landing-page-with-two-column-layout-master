@@ -296,6 +296,29 @@
   width: 30px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  .Main__container--section1 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "title image" "text image" "form image";
+    column-gap: 30px;
+  }
+  .Main__container--section1 form {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+  }
+  .Main__container--section2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "title image" "text image" "link image" "commit image";
+    justify-items: start;
+    column-gap: 30px;
+  }
+  .Main__container--section2 div:nth-child(5) {
+    width: 80%;
+  }
+}
 .containerFooter {
   display: grid;
   justify-items: center;
