@@ -318,6 +318,28 @@
   .Main__container--section2 div:nth-child(5) {
     width: 80%;
   }
+
+  .Main__container--section3 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    grid-template-areas: "title form" "paragraph form";
+    padding: 50px 20px;
+    column-gap: 30px;
+  }
+  .Main__container--section3 form, .Main__container--section3 h4 {
+    padding: 0px;
+    justify-items: start;
+  }
+  .Main__container--section3 form input[type=text], .Main__container--section3 h4 input[type=text] {
+    width: 90%;
+  }
+  .Main__container--section3 form input[type=button], .Main__container--section3 h4 input[type=button] {
+    width: 200px;
+  }
+  .Main__container--section3 h4, .Main__container--section3 p {
+    text-align: left;
+  }
 }
 .containerFooter {
   display: grid;
