@@ -106,9 +106,11 @@
   padding-bottom: 5px
   column-gap: 10px 
   grid-area: link
+  grid-template-areas: 'text img'
   img
    width: 20px
    height: 20px
+   grid-area: img
   a
    text-align: center
    font-family: 'Raleway', sans-serif
@@ -116,6 +118,7 @@
    font-size: 14px
    text-decoration: none
    color: hsl(170, 45%, 43%) 
+   grid-area: text
  div:nth-child(5)
   display: grid
   grid-area: commit
@@ -167,14 +170,14 @@
   grid-area: title
   font-family: 'Raleway', sans-serif
   font-weight: 700
-  font-size: 20px
+  font-size: clamp(20px, 4vw, 30px)
   color: hsl(240, 75%, 98%)
   padding-top: 50px
  p
   grid-area: paragraph
   font-family: 'Open Sans', sans-serif
   font-weight: 400
-  font-size: 14px
+  font-size: clamp(14px, 2vw, 20px)
   color: hsl(240, 75%, 98%)
   text-align: center
   line-height: 1.6
@@ -288,30 +291,34 @@
   div:nth-child(5)
    width: 80%
  .Main__container--section3
-  grid-template-columns: repeat(2, 1fr )
+  grid-template-columns: 48% 45%
   grid-template-rows: repeat(2, auto )
-  justify-items: center
+  justify-items: start
   grid-template-areas: 'title form' 'paragraph form'
-  padding: 50px 20px
-  column-gap: 30px
-  form, h4
+  padding: 50px 30px
+  column-gap: 200px
+  form
    padding: 0px
    justify-items: start
    input[type="email"]
-    width: 100%
+    width: 75%
    input[type="button"]
     width: 200px
   h4,p
    text-align: left
+   padding-top: 0
  .Main__container--section4
   grid-template-columns: repeat(4,auto)
   grid-template-rows: repeat(2,auto)
-  grid-template-areas: 'img img img img' 'contact links1 links2 socialnetworks' 
+  grid-template-areas: 'img img img img' 'contact links1 links2 socialnetworks'
+  div:nth-child(2)
+    grid-template-rows: repeat(4, 1fr)  
 .containerFooter
  display: grid
  justify-items: center
  background: #000
  width: 100%
+ padding: 10px
  h3
   color: #fff
   text-align: center

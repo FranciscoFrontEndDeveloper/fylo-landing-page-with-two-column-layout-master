@@ -125,10 +125,12 @@
   padding-bottom: 5px;
   column-gap: 10px;
   grid-area: link;
+  grid-template-areas: "text img";
 }
 .Main__container--section2 div:nth-child(4) img {
   width: 20px;
   height: 20px;
+  grid-area: img;
 }
 .Main__container--section2 div:nth-child(4) a {
   text-align: center;
@@ -137,6 +139,7 @@
   font-size: 14px;
   text-decoration: none;
   color: #3c9f8f;
+  grid-area: text;
 }
 .Main__container--section2 div:nth-child(5) {
   display: grid;
@@ -196,7 +199,7 @@
   grid-area: title;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(20px, 4vw, 30px);
   color: #f6f6fe;
   padding-top: 50px;
 }
@@ -204,7 +207,7 @@
   grid-area: paragraph;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: clamp(14px, 2vw, 20px);
   color: #f6f6fe;
   text-align: center;
   line-height: 1.6;
@@ -348,25 +351,26 @@
   }
 
   .Main__container--section3 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 48% 45%;
     grid-template-rows: repeat(2, auto);
-    justify-items: center;
+    justify-items: start;
     grid-template-areas: "title form" "paragraph form";
-    padding: 50px 20px;
-    column-gap: 30px;
+    padding: 50px 30px;
+    column-gap: 200px;
   }
-  .Main__container--section3 form, .Main__container--section3 h4 {
+  .Main__container--section3 form {
     padding: 0px;
     justify-items: start;
   }
-  .Main__container--section3 form input[type=email], .Main__container--section3 h4 input[type=email] {
-    width: 100%;
+  .Main__container--section3 form input[type=email] {
+    width: 75%;
   }
-  .Main__container--section3 form input[type=button], .Main__container--section3 h4 input[type=button] {
+  .Main__container--section3 form input[type=button] {
     width: 200px;
   }
   .Main__container--section3 h4, .Main__container--section3 p {
     text-align: left;
+    padding-top: 0;
   }
 
   .Main__container--section4 {
@@ -374,12 +378,16 @@
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "img img img img" "contact links1 links2 socialnetworks";
   }
+  .Main__container--section4 div:nth-child(2) {
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
 .containerFooter {
   display: grid;
   justify-items: center;
   background: #000;
   width: 100%;
+  padding: 10px;
 }
 .containerFooter h3 {
   color: #fff;
