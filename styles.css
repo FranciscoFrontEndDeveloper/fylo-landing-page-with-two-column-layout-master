@@ -78,7 +78,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.Main__container--section1 form input[type=button] {
+.Main__container--section1 form input[type=submit] {
   color: #f6f6fe;
   background: #3065f8;
   border: none;
@@ -234,8 +234,8 @@
   border: 1px solid #ccc;
   color: #585989;
 }
-.Main__container--section3 form input[type=button] {
-  width: 90%;
+.Main__container--section3 form input[type=submit] {
+  width: 40%;
   height: 40px;
   color: #f6f6fe;
   background: #3065f8;
@@ -335,7 +335,7 @@
   .Main__container--section1 form input[type=email] {
     width: 100%;
   }
-  .Main__container--section1 form input[type=button] {
+  .Main__container--section1 form input[type="submit "] {
     width: 70%;
   }
 
@@ -365,7 +365,7 @@
   .Main__container--section3 form input[type=email] {
     width: 75%;
   }
-  .Main__container--section3 form input[type=button] {
+  .Main__container--section3 form input[type="submit "] {
     width: 200px;
   }
   .Main__container--section3 h4, .Main__container--section3 p {
