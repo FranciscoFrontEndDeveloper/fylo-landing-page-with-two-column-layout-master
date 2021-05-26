@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap')
-// font-family: 'Open Sans', sans-serif
-// font-family: 'Raleway', sans-serif
 .Main
  width: 100%
  height: 100vh
@@ -36,18 +34,19 @@
  h1
   font-family: 'Raleway', sans-serif
   font-weight: 700
-  font-size: 20px
+  font-size: clamp(20px, 4vw, 37px)
   line-height: 1.6
   color: hsl(243, 87%, 12%)
   grid-area: title
  p
   font-family: 'Open Sans', sans-serif
   font-weight: 400
-  font-size: 14px
+  font-size: clamp(14px, 2vw, 22px)
   line-height: 1.5
   width: 102%
   color: hsl(238, 22%, 44%)
   grid-area: text
+  text-align: center
  form
   display: grid
   grid-template-columns: 1fr
@@ -57,15 +56,18 @@
   grid-area: form
   input
    width: 100%
+   height: 40px
+   padding: 10px
+   font-family: 'Open Sans', sans-serif
+   font-size: 14px
+  input[type="email"]
+   color: #585989
    outline: none
    border: 1px solid #ccc
    border-radius: 5px 
-   padding: 10px
   input[type="button"]
    color: hsl(240, 75%, 98%)
    background: hsl(224, 93%, 58%)
-   font-family: 'Open Sans', sans-serif
-   font-size: 14px
    border: none
    box-shadow: 2px 5px 16px 0px hsl(238, 22%, 44%)
 .Main__container--section2
@@ -84,7 +86,7 @@
   text-align: left
   font-family: 'Open Sans', sans-serif
   font-weight: 400
-  font-size: 14px
+  font-size: clamp(14px, 2vw, 20px)
   line-height: 1.5
   color: hsl(238, 22%, 44%)
   grid-area: text
@@ -92,7 +94,7 @@
   text-align: center
   font-family: 'Raleway', sans-serif
   font-weight: 700
-  font-size: 16px
+  font-size: clamp(16px, 2vw, 37px)
   line-height: 1.6
   color: hsl(243, 87%, 12%)
   grid-area: title
@@ -185,19 +187,23 @@
   row-gap: 10px
   padding-bottom: 50px
   input
-   width: 80%
+   width: 90%
+   height: 40px
    outline: none
-   border: 1px solid #ccc
+   padding: 10px
    border-radius: 3px 
-   padding: 10px 0
-  input[type="button"]
-   color: hsl(240, 75%, 98%)
-   background: hsl(224, 93%, 58%)
    font-family: 'Open Sans', sans-serif
    font-size: 14px
+  input[type="email"]
+   border: 1px solid #ccc
+   color: #585989
+  input[type="button"]
+   width: 90%
+   height: 40px
+   color: hsl(240, 75%, 98%)
+   background: hsl(224, 93%, 58%)
    border: none
    box-shadow: 2px 5px 10px 0px hsl(243, 87%, 12%)
-   padding: 10px 0
 .Main__container--section4
  display: grid
  grid-template-columns: 1fr
@@ -222,6 +228,7 @@
   column-gap: 20px
   row-gap: 20px
   grid-template-areas: 'icon1 text1' 'icon2 text2'
+  grid-area: contact
   img:nth-child(1)
    grid-area: icon1
   p:nth-child(2)
@@ -235,34 +242,43 @@
   grid-template-columns: 1fr
   grid-template-rows: repeat(4,auto )
   row-gap: 20px
+  grid-area: links1
  div:nth-child(4)
   display: grid
   grid-template-columns: 1fr
-  grid-template-rows: repeat(3,auto )
+  grid-template-rows: repeat(4,1fr )
   row-gap: 20px
+  grid-area: links2
  div:nth-child(5)
   grid-template-columns: repeat(3,auto )
   grid-template-rows: 1fr
   justify-content: center
   display: grid
   column-gap: 35px
+  grid-area: socialnetworks
   input
    border: 1px solid hsl(240, 75%, 98%)
    border-radius: 50%
    padding: 5px
    width: 30px
-
 @media screen and ( min-width: 768px ) and (max-width: 1920px)
+ .Main__container--nav, .Main__container--section1, .Main__container--section2
+  padding: 30px 50px
  .Main__container--section1
   grid-template-columns: repeat(2, 1fr)
   grid-template-rows: repeat(2,auto )
   grid-template-areas: 'title image' 'text image' 'form image'
   column-gap: 30px
+  h1,p
+   text-align: left
   form
    grid-template-columns: repeat(2, auto)
    grid-template-rows: 1fr
    column-gap: 20px
-   input
+   input[type="email"]
+    width: 100%
+   input[type="button"]
+    width: 70%
  .Main__container--section2
   grid-template-columns: repeat(2, 1fr)
   grid-template-rows: repeat(3,auto )
@@ -281,27 +297,16 @@
   form, h4
    padding: 0px
    justify-items: start
-   input[type="text"]
-    width: 90%
+   input[type="email"]
+    width: 100%
    input[type="button"]
     width: 200px
   h4,p
    text-align: left
-
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
+ .Main__container--section4
+  grid-template-columns: repeat(4,auto)
+  grid-template-rows: repeat(2,auto)
+  grid-template-areas: 'img img img img' 'contact links1 links2 socialnetworks' 
 .containerFooter
  display: grid
  justify-items: center
